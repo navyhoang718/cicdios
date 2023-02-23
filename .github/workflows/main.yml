@@ -36,25 +36,16 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       # Install flutter
-      - name: Flutter get
-        uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '2.10.1'
+      - name: Install
+        run: pod install
 
-      # Install your project's dependencies
-      - run: flutter pub get
+      - name: Build
+        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Development build
 
-      # Build and sign the ipa using a single flutter command
-      - name: Building IPA
-        run: flutter build ipa --release --export-options-plist=ios/Runner/ExportOptions.plist
-          
-      # Collect the file and upload as artifact
-      - name: collect ipa artifacts
-        uses: actions/upload-artifact@v2
-        with:
-         name: release-ipa
-         # Path to the release files
-         path: build/ios/ipa/*.ipa
+     - name: Deploy
+        run: |
+          xcodebuild clean -workspace Grapevine.xcworkspace -scheme Grapevine
+          xcodebuild archive -workspace Grapevine.xcworkspace -scheme Development -archivePath something.xcarchive -destination generic/platform=iOS
 
       # Important! Cleanup: remove the certificate and provisioning profile from the runner!
       - name: Clean up keychain and provisioning profile
