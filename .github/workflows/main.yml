@@ -37,10 +37,12 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       # Install flutter
       - name: Install
-        run: pod install
+        run: |
+            pod install
 
       - name: Build
-        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Development build
+        run: |
+         xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Development build
 
      - name: Deploy
         run: |
