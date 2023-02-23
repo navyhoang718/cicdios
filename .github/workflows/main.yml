@@ -46,7 +46,7 @@ jobs:
 
       # Build and sign the ipa using a single flutter command
       - name: Building IPA
-        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Development build
+        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Grapevine build
       - name: Deploy
         run: |
           xcodebuild clean -workspace Grapevine.xcworkspace -scheme Grapevine
