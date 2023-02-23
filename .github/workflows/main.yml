@@ -49,8 +49,8 @@ jobs:
         run: xcodebuild -workspace something.xcworkspace -sdk iphonesimulator -scheme Development build
       - name: Deploy
         run: |
-          xcodebuild clean -workspace something.xcworkspace -scheme Development
-          xcodebuild archive -workspace something.xcworkspace -scheme Development -archivePath something.xcarchive -destination generic/platform=iOS
+          xcodebuild clean -workspace Grapevine.xcworkspace -scheme Grapevine
+          xcodebuild archive -workspace Grapevine.xcworkspace -scheme Grapevine -archivePath Grapevine.xcarchive -destination generic/platform=iOS
       # Collect the file and upload as artifact
       - name: collect ipa artifacts
         uses: actions/upload-artifact@v2
