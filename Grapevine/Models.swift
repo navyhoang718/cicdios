@@ -30,7 +30,7 @@ class FeaturedApps: NSObject {
             super.setValue(value, forKey: key)
         }
     }
-    
+ //
 }
 
 class AppCategory: NSObject {
