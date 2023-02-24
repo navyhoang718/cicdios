@@ -50,7 +50,7 @@ jobs:
       - name: Deploy
         run: |
           xcodebuild clean -workspace Grapevine.xcworkspace -scheme Grapevine
-          xcodebuild -workspace Grapevine.xcworkspace -scheme Grapevine  archive -archivePath build/Grapevine.xcarchive -export-options-plist build/ios/ipa
+          xcodebuild -workspace Grapevine.xcworkspace -scheme Grapevine  archive -archivePath build/Grapevine.xcarchive
           xcodebuild -exportArchive -archivePath build/Grapevine.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath build/ios/ipa
 
       # Collect the file and upload as artifact
