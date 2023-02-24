@@ -61,7 +61,7 @@ jobs:
          # Path to the release files
          path: build/ios/ipa/*.ipa
 
-      # Important! Cleanup: remove the certificate and provisioning profile from the runner!
+      # Important! Cleanup: remove1 the certificate and provisioning profile from the runner!
       - name: Clean up keychain and provisioning profile
         if: ${{ always() }}
         run: |
