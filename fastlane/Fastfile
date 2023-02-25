@@ -7,7 +7,7 @@ build_dir = "./build"
 service_credentials_file = "./fastlane/wdxios-serviceCredential.json"
 project_name = "Grapevine"
 firebase_cli_path = "/usr/local/bin/firebase"
-provisioning_dir = "./"
+provisioning_dir = "./fastlane"
 xcodeproj = "#{prefix_dir}#{project_name}.xcodeproj"
 workspace = "#{prefix_dir}#{project_name}.xcworkspace"
 devices = ["iPhone 14"]
@@ -46,7 +46,7 @@ before_all do |lane, options|
   ENV['ACTIVE_SCHEME'] = options[:scheme]
   ENV['ARCHIVE_METHOD'] = options[:archive_method]
   ENV['CERTIFICATE_FILE_PATH'] = "./fastlane/certificate.p12"
-  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_file_name}.mobileprovision"
+  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_dir}/#{provisioning_file_name}.mobileprovision"
   ENV['TEAM_ID'] = options[:teamid]
   ENV['BUILD_DIRECTORY'] = build_dir
   ENV['PATH_APP_STORE_CONNECT_API_KEY'] = "fastlane/app-store-connect.json"
