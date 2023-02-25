@@ -13,7 +13,8 @@ jobs:
       - name: CocoaPod Install
         run: pod install
       - name: Provisioning profile
-        run: fastlane codesigning 
+        run: fastlane codesigning
+      - name: Build
         run: fastlane buildApp scheme:Grapevine archive_method:app-store
       - name: Distribute
-        run: fastlane distribute
+        run: fastlane distribute app_id:${{ secrets.APP_ID }}
