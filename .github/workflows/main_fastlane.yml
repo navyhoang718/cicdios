@@ -16,5 +16,5 @@ jobs:
         run: fastlane codesigning scheme:Grapevine archive_method:app-store
       - name: Build
         run: fastlane buildApp scheme:Grapevine archive_method:app-store
-      - name: Distribute
-        run: fastlane distribute app_id:${{ secrets.APP_ID }}
+      - name: Distribute 
+        run: fastlane distribute scheme:Grapevine archive_method:app-store
