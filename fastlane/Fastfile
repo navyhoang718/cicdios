@@ -75,7 +75,7 @@ platform :ios do
 
  import_certificate(
      keychain_name: "Learning1Keychain",
-     certificate_path: "ENV['CERTIFICATE_FILE_PATH']",
+     certificate_path: ENV['CERTIFICATE_FILE_PATH'],
      keychain_password: "123456",
      certificate_password: "123456",
    )
