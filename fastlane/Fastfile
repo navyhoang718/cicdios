@@ -5,10 +5,9 @@ fastlane_require 'xcodeproj'
 prefix_dir = "./"
 build_dir = "./build"
 service_credentials_file = "./fastlane/wdxios-serviceCredential.json"
-prefix_dir = "./"
 project_name = "Grapevine"
 firebase_cli_path = "/usr/local/bin/firebase"
-provisioning_dir = "./fastlane"
+provisioning_dir = "./"
 xcodeproj = "#{prefix_dir}#{project_name}.xcodeproj"
 workspace = "#{prefix_dir}#{project_name}.xcworkspace"
 devices = ["iPhone 14"]
@@ -27,7 +26,7 @@ before_all do |lane, options|
     version_prefix = "P."
     firebase_app_id = "1:444550039548:ios:4ece8b5b37a1d25dd55479"
     app_iden = "vn.greenstock.app.dev1"
-        provisioning_file_name_prefix = "greenstock"
+    provisioning_file_name_prefix = "greenstock"
   else
     
   end

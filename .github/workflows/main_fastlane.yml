@@ -13,7 +13,7 @@ jobs:
       - name: CocoaPod Install
         run: pod install
       - name: Provisioning profile
-        run: fastlane codesigning
+        run: fastlane codesigning scheme:Grapevine archive_method:app-store
       - name: Build
         run: fastlane buildApp scheme:Grapevine archive_method:app-store
       - name: Distribute
