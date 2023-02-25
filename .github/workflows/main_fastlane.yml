@@ -13,8 +13,7 @@ jobs:
       - name: CocoaPod Install
         run: pod install
       - name: Provisioning profile
-        run: fastlane codesigning keychain_password:${{ secrets.KEYCHAIN_PWD }} certificate_password:BUILD_CERTIFICATE_BASE64
-      - name: Build
-        run: fastlane buildApp
+        run: fastlane codesigning 
+        run: fastlane buildApp scheme:Grapevine archive_method:app-store
       - name: Distribute
-        run: fastlane distribute app_id:${{ secrets.APP_ID }}
+        run: fastlane distribute

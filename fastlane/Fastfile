@@ -1,14 +1,64 @@
 
 default_platform(:ios)
 
+fastlane_require 'xcodeproj'
 prefix_dir = "./"
 build_dir = "./build"
-project_name = "Grapevine"
 service_credentials_file = "./fastlane/wdxios-serviceCredential.json"
-provisioning_file_path = "./fastlane/greenstock_dis.mobileprovision"
+prefix_dir = "./"
+project_name = "Grapevine"
+firebase_cli_path = "/usr/local/bin/firebase"
+provisioning_dir = "./fastlane"
 xcodeproj = "#{prefix_dir}#{project_name}.xcodeproj"
 workspace = "#{prefix_dir}#{project_name}.xcworkspace"
+devices = ["iPhone 14"]
+provisioning_file_name_prefix = ""
+provisioning_file_name = ""
+app_iden = ""
+# =============
+before_all do |lane, options|
 
+  if options[:scheme] == "Grapevine"
+    version_prefix = "D."
+    firebase_app_id = "1:444550039548:ios:4ece8b5b37a1d25dd55479"
+    app_iden = "vn.greenstock.app.dev1"
+    provisioning_file_name_prefix = "greenstock"
+  elsif options[:scheme] == "GrapevinePro"
+    version_prefix = "P."
+    firebase_app_id = "1:444550039548:ios:4ece8b5b37a1d25dd55479"
+    app_iden = "vn.greenstock.app.dev1"
+        provisioning_file_name_prefix = "greenstock"
+  else
+    
+  end
+
+  if options[:archive_method] == "app-store"
+    provisioning_file_name = "#{provisioning_file_name_prefix}-appstore"
+  else
+    provisioning_file_name = "#{provisioning_file_name_prefix}-adhoc"
+  end
+  
+  
+  ipa_file_name = "#{options[:scheme]}_#{options[:archive_method]}"
+  ENV["IPA_FILE_NAME"] = ipa_file_name
+  ENV['CURRENT_VERSION'] = options[:version]
+  ENV['VERSION_PREFIX'] = version_prefix
+  ENV['APP_IDENTIFIER'] = app_iden
+  ENV['ACTIVE_SCHEME'] = options[:scheme]
+  ENV['ARCHIVE_METHOD'] = options[:archive_method]
+  ENV['CERTIFICATE_FILE_PATH'] = "./fastlane/certificate.p12"
+  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_dir}/#{provisioning_file_name}.mobileprovision"
+  ENV['TEAM_ID'] = options[:teamid]
+  ENV['BUILD_DIRECTORY'] = build_dir
+  ENV['PATH_APP_STORE_CONNECT_API_KEY'] = "fastlane/app-store-connect.json"
+  ENV['PATH_DSYM'] = "#{build_dir}/#{ipa_file_name}.app.dSYM.zip"
+  ENV['PATH_FIREBASE_CLI'] = "#{firebase_cli_path}"
+  ENV['PATH_IPA'] = "#{build_dir}/#{ipa_file_name}.ipa"
+  ENV['CURRENT_BUILD_NUMBER'] = "1"
+  ENV['FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD'] = options[:specific_password]
+  ENV['WORKSPACE'] = workspace
+  
+end
 
 platform :ios do
  desc "Description of what the lane does"
@@ -22,22 +72,24 @@ platform :ios do
    password: "123456"
  )
 
- install_provisioning_profile(path: "./fastlane/greenstock_dis.mobileprovision")
+ install_provisioning_profile(path: ENV['PROVISIONING_FILE_PATH'])
 
  import_certificate(
      keychain_name: "Learning1Keychain",
-     certificate_path: "./fastlane/certificate.p12",
+     certificate_path: "ENV['CERTIFICATE_FILE_PATH']",
      keychain_password: "123456",
      certificate_password: "123456",
    )
 
  end
 
- lane :buildApp do
+ lane :buildApp do |options|
    gym(
-       scheme: "Grapevine",
-       workspace: "Grapevine.xcworkspace",
-       export_method: ENV['TYPE'],
+       scheme: ENV['ACTIVE_SCHEME'],
+       workspace: ENV['WORKSPACE'],
+       export_method: ENV['ARCHIVE_METHOD'],
+       output_directory: ENV['BUILD_DIRECTORY'],
+       output_name: "#{ENV['IPA_FILE_NAME']}.ipa",
        clean: true
    )
 
@@ -47,10 +99,10 @@ platform :ios do
 
        firebase_app_distribution(
            app: "1:444550039548:ios:4ece8b5b37a1d25dd55479",
-           testers: "thuanuit96@gmail.com, tester2@company.com",
-           release_notes: "Demo",
+           testers: "thuanuit96@gmail.com",
+           release_notes: "Deploy new version",
            service_credentials_file: "./fastlane/wdxios-serviceCredential.json",
-           ipa_path: "Grapevine.ipa"
+           ipa_path: ENV['PATH_IPA']
 
        )
 

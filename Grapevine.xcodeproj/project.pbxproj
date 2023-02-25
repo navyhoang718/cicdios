@@ -17,7 +17,6 @@
 		CE815CAE29A90D53004F8B41 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = CE815CA929A90D53004F8B41 /* Appfile */; };
 		CE815CAF29A90D53004F8B41 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = CE815CAA29A90D53004F8B41 /* Fastfile */; };
 		CE815CB029A90D53004F8B41 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CE815CAB29A90D53004F8B41 /* README.md */; };
-		CE815CB129A90D53004F8B41 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CE815CAC29A90D53004F8B41 /* Matchfile */; };
 		CE815CB229A90D53004F8B41 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = CE815CAD29A90D53004F8B41 /* report.xml */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +34,8 @@
 		CE815CA929A90D53004F8B41 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		CE815CAA29A90D53004F8B41 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		CE815CAB29A90D53004F8B41 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CE815CAC29A90D53004F8B41 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		CE815CAD29A90D53004F8B41 /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
-		CE815CB329A919DE004F8B41 /* greenstock_dis.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = greenstock_dis.mobileprovision; sourceTree = "<group>"; };
+		CE815CB329A919DE004F8B41 /* greenstock-appstore.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "greenstock-appstore.mobileprovision"; sourceTree = "<group>"; };
 		CE815CB429A919EC004F8B41 /* certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.p12; sourceTree = "<group>"; };
 		FA29E5E6D5FD939016181776 /* Pods_Grapevine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grapevine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,13 +138,12 @@
 		CE815CA829A90D53004F8B41 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				CE815CB329A919DE004F8B41 /* greenstock_dis.mobileprovision */,
+				CE815CB329A919DE004F8B41 /* greenstock-appstore.mobileprovision */,
 				CE2919BA29A9AE5400444C8C /* wdxios-serviceCredential.json */,
 				CE815CB429A919EC004F8B41 /* certificate.p12 */,
 				CE815CA929A90D53004F8B41 /* Appfile */,
 				CE815CAA29A90D53004F8B41 /* Fastfile */,
 				CE815CAB29A90D53004F8B41 /* README.md */,
-				CE815CAC29A90D53004F8B41 /* Matchfile */,
 				CE815CAD29A90D53004F8B41 /* report.xml */,
 			);
 			path = fastlane;
@@ -230,7 +227,6 @@
 				CE815CAE29A90D53004F8B41 /* Appfile in Resources */,
 				9519BCFB1B4B369B0094C8B9 /* Images.xcassets in Resources */,
 				CE815CB029A90D53004F8B41 /* README.md in Resources */,
-				CE815CB129A90D53004F8B41 /* Matchfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
