@@ -55,5 +55,18 @@ platform :ios do
        )
 
    end
+   
+   lane :upload_to_app_store do
+    deliver(
+      ipa: "Grapevine.ipa",
+      app_identifier: "vn.greenstock.app.dev1",
+      username: "thuanuit96@gmail.com",
+      password: "Specific Password",
+      skip_screenshots: true,
+      skip_metadata: true,
+      skip_binary_upload: false
+      )
+  end
+
 end
 
