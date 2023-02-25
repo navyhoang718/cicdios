@@ -46,7 +46,7 @@ before_all do |lane, options|
   ENV['ACTIVE_SCHEME'] = options[:scheme]
   ENV['ARCHIVE_METHOD'] = options[:archive_method]
   ENV['CERTIFICATE_FILE_PATH'] = "./fastlane/certificate.p12"
-  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_dir}/#{provisioning_file_name}.mobileprovision"
+  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_file_name}.mobileprovision"
   ENV['TEAM_ID'] = options[:teamid]
   ENV['BUILD_DIRECTORY'] = build_dir
   ENV['PATH_APP_STORE_CONNECT_API_KEY'] = "fastlane/app-store-connect.json"
