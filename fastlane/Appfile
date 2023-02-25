@@ -1,0 +1,8 @@
+# app_identifier("vn.greenstock.app.dev1") # The bundle identifier of your app
+# apple_id("thuanuit96@gmail.com") # Your Apple Developer Portal username
+
+# itc_team_id("122418012") # App Store Connect Team ID
+# team_id("4H8J6YZ6WL") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

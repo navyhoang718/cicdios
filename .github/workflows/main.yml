@@ -46,12 +46,12 @@ jobs:
 
       # Build and sign the ipa using a single flutter command
       - name: Building IPA
-        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Grapevine build
+        run: xcodebuild -workspace Grapevine.xcworkspace -sdk iphonesimulator -scheme Grapevine build -allowProvisioningUpdates
       - name: Deploy
         run: |
           xcodebuild clean -workspace Grapevine.xcworkspace -scheme Grapevine
           xcodebuild -workspace Grapevine.xcworkspace -scheme Grapevine  archive -archivePath build/Grapevine.xcarchive
-          xcodebuild -exportArchive -archivePath build/Grapevine.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath ./build/ios/ipa
+          xcodebuild -exportArchive -archivePath build/Grapevine.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath ./build/ios/ipa -allowProvisioningUpdates
 
       # Collect the file and upload as artifact
       - name: collect ipa artifacts

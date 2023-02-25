@@ -1,0 +1,20 @@
+
+name: iOS CI Example
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: CocoaPod Install
+        run: pod install
+      - name: Provisioning profile
+        run: fastlane codesigning keychain_password:${{ secrets.KEYCHAIN_PWD }} certificate_password:BUILD_CERTIFICATE_BASE64
+      - name: Build
+        run: fastlane buildApp
+      - name: Distribute
+        run: fastlane distribute app_id:${{ secrets.APP_ID }}

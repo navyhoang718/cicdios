@@ -1,0 +1,59 @@
+
+default_platform(:ios)
+
+prefix_dir = "./"
+build_dir = "./build"
+project_name = "Grapevine"
+service_credentials_file = "./fastlane/wdxios-serviceCredential.json"
+provisioning_file_path = "./fastlane/greenstock_dis.mobileprovision"
+xcodeproj = "#{prefix_dir}#{project_name}.xcodeproj"
+workspace = "#{prefix_dir}#{project_name}.xcworkspace"
+
+
+platform :ios do
+ desc "Description of what the lane does"
+ lane :codesigning do |options|
+   create_keychain(
+   name: "Learning1Keychain",
+   default_keychain: false,
+   unlock: true,
+   timeout: 3600,
+   lock_when_sleeps: true,
+   password: "123456"
+ )
+
+ install_provisioning_profile(path: "./fastlane/greenstock_dis.mobileprovision")
+
+ import_certificate(
+     keychain_name: "Learning1Keychain",
+     certificate_path: "./fastlane/certificate.p12",
+     keychain_password: "123456",
+     certificate_password: "123456",
+   )
+
+ end
+
+ lane :buildApp do
+   gym(
+       scheme: "Grapevine",
+       workspace: "Grapevine.xcworkspace",
+       export_method: ENV['TYPE'],
+       clean: true
+   )
+
+ end
+ 
+ lane :distribute do |options|
+
+       firebase_app_distribution(
+           app: "1:444550039548:ios:4ece8b5b37a1d25dd55479",
+           testers: "thuanuit96@gmail.com, tester2@company.com",
+           release_notes: "Demo",
+           service_credentials_file: "./fastlane/wdxios-serviceCredential.json",
+           ipa_path: "Grapevine.ipa"
+
+       )
+
+   end
+end
+
