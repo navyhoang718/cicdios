@@ -7,59 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3555090D4B08ACA37037B3D403D3C1F5 /* Pods-Grapevine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5510B52E9798EF35A03C704E4DC3B972 /* Pods-Grapevine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8573F79E3560389AA80E280E1380231A /* Pods-Grapevine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 528489EFEC274C969E78AC76A0E3F34C /* Pods-Grapevine-dummy.m */; };
-		9C74B562C6681154316CA04B3F2A14BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1C27505832A24E62C2B7054481B6E838 /* Pods-Grapevine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE0EE5D965680E44C2800D1F962B15 /* Pods-Grapevine-dummy.m */; };
+		1F1A1D3818D240F9EBA605F451A076AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7242C93E76F922A564C8D940EDC38E0F /* Pods-Grapevine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1796C5158D2F4FA7AC3D746A401B68 /* Pods-Grapevine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00596EF23AD214C258D086F463557625 /* Pods-Grapevine-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grapevine-Info.plist"; sourceTree = "<group>"; };
-		0E20E7DAC6BE92EC8E193C9192B2D1DE /* Pods-Grapevine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Grapevine-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2D7EBDB9ACAFC3537367AA3C6E1FED5C /* Pods-Grapevine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grapevine.debug.xcconfig"; sourceTree = "<group>"; };
-		2DF6E1DB7BD54DD293FB4925FDE10918 /* Pods-Grapevine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Grapevine.modulemap"; sourceTree = "<group>"; };
+		0A704521F395D8E6F8EE0D7F8A8CC4C0 /* Pods-Grapevine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Grapevine.modulemap"; sourceTree = "<group>"; };
 		4327A59078ED1E11312EA76657959E3C /* Pods-Grapevine */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Grapevine"; path = Pods_Grapevine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		528489EFEC274C969E78AC76A0E3F34C /* Pods-Grapevine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grapevine-dummy.m"; sourceTree = "<group>"; };
-		5510B52E9798EF35A03C704E4DC3B972 /* Pods-Grapevine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grapevine-umbrella.h"; sourceTree = "<group>"; };
+		5691A02F5BB5B71F937F6CC8117DA47F /* Pods-Grapevine.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grapevine.dev.xcconfig"; sourceTree = "<group>"; };
+		57338BABB0482980893FD0931F1F1334 /* Pods-Grapevine-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grapevine-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		85A4758C76CFEB1970E6F601F1E6C621 /* Pods-Grapevine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grapevine.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F57AEB4B692F4B9D5879E5F270690A19 /* Pods-Grapevine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grapevine-acknowledgements.plist"; sourceTree = "<group>"; };
+		C60200F80AC926A4C8755877022EC74F /* Pods-Grapevine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grapevine-acknowledgements.plist"; sourceTree = "<group>"; };
+		DCEE0EE5D965680E44C2800D1F962B15 /* Pods-Grapevine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grapevine-dummy.m"; sourceTree = "<group>"; };
+		E842BDD3D069DFA038629F2FF708DCD8 /* Pods-Grapevine.pro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grapevine.pro.xcconfig"; sourceTree = "<group>"; };
+		ED1796C5158D2F4FA7AC3D746A401B68 /* Pods-Grapevine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grapevine-umbrella.h"; sourceTree = "<group>"; };
+		FD65CF3A7ADF11F1ED3A053036F20D1B /* Pods-Grapevine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Grapevine-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9090EB702D5598C98A460E6A0B37CC1 /* Frameworks */ = {
+		E90E4ED2BE878C808C22E0BD0CE09301 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C74B562C6681154316CA04B3F2A14BC /* Foundation.framework in Frameworks */,
+				1F1A1D3818D240F9EBA605F451A076AB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A33A6035D64EC64F99010A40CB3D0A7 /* Pods-Grapevine */ = {
-			isa = PBXGroup;
-			children = (
-				2DF6E1DB7BD54DD293FB4925FDE10918 /* Pods-Grapevine.modulemap */,
-				0E20E7DAC6BE92EC8E193C9192B2D1DE /* Pods-Grapevine-acknowledgements.markdown */,
-				F57AEB4B692F4B9D5879E5F270690A19 /* Pods-Grapevine-acknowledgements.plist */,
-				528489EFEC274C969E78AC76A0E3F34C /* Pods-Grapevine-dummy.m */,
-				00596EF23AD214C258D086F463557625 /* Pods-Grapevine-Info.plist */,
-				5510B52E9798EF35A03C704E4DC3B972 /* Pods-Grapevine-umbrella.h */,
-				2D7EBDB9ACAFC3537367AA3C6E1FED5C /* Pods-Grapevine.debug.xcconfig */,
-				85A4758C76CFEB1970E6F601F1E6C621 /* Pods-Grapevine.release.xcconfig */,
-			);
-			name = "Pods-Grapevine";
-			path = "Target Support Files/Pods-Grapevine";
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		98A64CC43238CDA85BA48E16B442A6B1 /* Pods-Grapevine */ = {
+			isa = PBXGroup;
+			children = (
+				0A704521F395D8E6F8EE0D7F8A8CC4C0 /* Pods-Grapevine.modulemap */,
+				FD65CF3A7ADF11F1ED3A053036F20D1B /* Pods-Grapevine-acknowledgements.markdown */,
+				C60200F80AC926A4C8755877022EC74F /* Pods-Grapevine-acknowledgements.plist */,
+				DCEE0EE5D965680E44C2800D1F962B15 /* Pods-Grapevine-dummy.m */,
+				57338BABB0482980893FD0931F1F1334 /* Pods-Grapevine-Info.plist */,
+				ED1796C5158D2F4FA7AC3D746A401B68 /* Pods-Grapevine-umbrella.h */,
+				5691A02F5BB5B71F937F6CC8117DA47F /* Pods-Grapevine.dev.xcconfig */,
+				E842BDD3D069DFA038629F2FF708DCD8 /* Pods-Grapevine.pro.xcconfig */,
+			);
+			name = "Pods-Grapevine";
+			path = "Target Support Files/Pods-Grapevine";
 			sourceTree = "<group>";
 		};
 		A32D73EB2FCAEA3D096494758F2D69B2 /* Products */ = {
@@ -73,7 +73,7 @@
 		BDBAC2CEF97A6198B6BC1A5571D05F10 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A33A6035D64EC64F99010A40CB3D0A7 /* Pods-Grapevine */,
+				98A64CC43238CDA85BA48E16B442A6B1 /* Pods-Grapevine */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -99,11 +99,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D2B3C5D1412C728EAB7CAF2962F2DFAD /* Headers */ = {
+		CBD41D0D9189EA4AAF7EC6641A8E1001 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3555090D4B08ACA37037B3D403D3C1F5 /* Pods-Grapevine-umbrella.h in Headers */,
+				7242C93E76F922A564C8D940EDC38E0F /* Pods-Grapevine-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +112,12 @@
 /* Begin PBXNativeTarget section */
 		A6D93274E9788EA6698822A5BE6EA09F /* Pods-Grapevine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7026DC2BA5DD1C86A8DA2FF3EC6FCD0F /* Build configuration list for PBXNativeTarget "Pods-Grapevine" */;
+			buildConfigurationList = F853176A8E9BAEE6DB9CEB45CD101DE6 /* Build configuration list for PBXNativeTarget "Pods-Grapevine" */;
 			buildPhases = (
-				D2B3C5D1412C728EAB7CAF2962F2DFAD /* Headers */,
-				431ED90044AA61F93299E71A05BD8CE9 /* Sources */,
-				B9090EB702D5598C98A460E6A0B37CC1 /* Frameworks */,
-				9E8EC8A0922FE0AF4BA1C6A5F36D29B8 /* Resources */,
+				CBD41D0D9189EA4AAF7EC6641A8E1001 /* Headers */,
+				0EE7D95B336541C7BA58CCC2C84C5DEF /* Sources */,
+				E90E4ED2BE878C808C22E0BD0CE09301 /* Frameworks */,
+				37E616F80813BDBC5570E26B40340DD9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -156,7 +156,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E8EC8A0922FE0AF4BA1C6A5F36D29B8 /* Resources */ = {
+		37E616F80813BDBC5570E26B40340DD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,54 +166,143 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		431ED90044AA61F93299E71A05BD8CE9 /* Sources */ = {
+		0EE7D95B336541C7BA58CCC2C84C5DEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8573F79E3560389AA80E280E1380231A /* Pods-Grapevine-dummy.m in Sources */,
+				1C27505832A24E62C2B7054481B6E838 /* Pods-Grapevine-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4E8E32B3BCC619E0C4AE11C837D6A0C7 /* Debug */ = {
+		0E98BD78922E5A466D5258C246126B03 /* Pro */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D7EBDB9ACAFC3537367AA3C6E1FED5C /* Pods-Grapevine.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_PRO=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Pro;
 		};
-		85294EACA128E4677F431AA136AA0E58 /* Release */ = {
+		23DEC26B4565523506D4AF9EB7C98BEA /* Dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85A4758C76CFEB1970E6F601F1E6C621 /* Pods-Grapevine.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEV=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Dev;
+		};
+		26C18A7405F96125637D9CEA7309E941 /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -245,6 +334,76 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		2EDB9EE6A3FF1B47A426C38A6FA0C9A8 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5691A02F5BB5B71F937F6CC8117DA47F /* Pods-Grapevine.dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Dev;
+		};
+		674DD7F0C81D0C85318CA04A6CC7E067 /* Pro */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E842BDD3D069DFA038629F2FF708DCD8 /* Pods-Grapevine.pro.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Pro;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -374,6 +533,39 @@
 			};
 			name = Debug;
 		};
+		D16380567BB78B7641435D0F583AEF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Grapevine/Pods-Grapevine.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -381,16 +573,20 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				23DEC26B4565523506D4AF9EB7C98BEA /* Dev */,
+				0E98BD78922E5A466D5258C246126B03 /* Pro */,
 				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7026DC2BA5DD1C86A8DA2FF3EC6FCD0F /* Build configuration list for PBXNativeTarget "Pods-Grapevine" */ = {
+		F853176A8E9BAEE6DB9CEB45CD101DE6 /* Build configuration list for PBXNativeTarget "Pods-Grapevine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E8E32B3BCC619E0C4AE11C837D6A0C7 /* Debug */,
-				85294EACA128E4677F431AA136AA0E58 /* Release */,
+				D16380567BB78B7641435D0F583AEF05 /* Debug */,
+				2EDB9EE6A3FF1B47A426C38A6FA0C9A8 /* Dev */,
+				674DD7F0C81D0C85318CA04A6CC7E067 /* Pro */,
+				26C18A7405F96125637D9CEA7309E941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

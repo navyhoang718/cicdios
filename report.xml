@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.00026">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: Switch to ios checkEnvironmentInfo lane" time="0.000179">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: Switch to ios codesigning lane" time="0.000168">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: create_keychain" time="0.074138">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: install_provisioning_profile" time="0.097585">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: import_certificate" time="0.135402">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: Switch to ios incrementBuild lane" time="0.000308">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to ios buildApp lane" time="0.000269">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: gym" time="34.439774">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: Switch to ios distributeToFirebase lane" time="0.000295">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: firebase_app_distribution" time="591.319554">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

@@ -1,0 +1,205 @@
+
+default_platform(:ios)
+fastlane_require 'xcodeproj'
+prefix_dir = "./"
+build_dir = "./build"
+service_credentials_file = "./fastlane/wdxios-serviceCredential.json"
+project_name = "Grapevine"
+firebase_cli_path = "/usr/local/bin/firebase"
+provisioning_dir = "./fastlane"
+xcodeproj = "../#{project_name}.xcodeproj"
+workspace = "../#{project_name}.xcworkspace"
+devices = ["iPhone 14"]
+provisioning_file_name_prefix = "greenstock"
+
+
+# =============
+before_all do |lane, options|
+
+  if options[:scheme] == "GrapevineDev"
+    version_prefix = "D."
+    firebase_app_id = "1:444550039548:ios:4ece8b5b37a1d25dd55479"
+    app_iden = "vn.greenstock.app.dev1"
+  elsif options[:scheme] == "GrapevinePro"
+    version_prefix = "P."
+    firebase_app_id = "1:444550039548:ios:4ece8b5b37a1d25dd55479"
+    app_iden = "vn.greenstock.app1"
+  else
+    
+  end
+
+  if options[:archive_method] == "app-store"
+    provisioning_file_name = "#{provisioning_file_name_prefix}-appstore"
+    provisioning_key_name = "greenstockDis-appstore"
+  else
+    provisioning_file_name = "#{provisioning_file_name_prefix}-adhoc"
+    provisioning_key_name = "greenstockDis-adhoc"
+  end
+  
+  
+  ipa_file_name = "#{options[:scheme]}_#{options[:archive_method]}"
+  ENV["IPA_FILE_NAME"] = ipa_file_name
+  ENV['CURRENT_VERSION'] = options[:version]
+  ENV['VERSION_PREFIX'] = version_prefix
+  ENV['APP_IDENTIFIER'] = app_iden
+  ENV['ACTIVE_SCHEME'] = options[:scheme]
+  ENV['ARCHIVE_METHOD'] = options[:archive_method]
+  ENV['CERTIFICATE_FILE_PATH'] = "./fastlane/certificate.p12"
+  ENV['PROVISIONING_FILE_PATH'] = "#{provisioning_dir}/#{provisioning_file_name}.mobileprovision"
+  ENV['PROVISIONING_KEY_NAME'] = provisioning_file_name
+  ENV['TEAM_ID'] = options[:teamid]
+  ENV['BUILD_DIRECTORY'] = build_dir
+  ENV['PATH_APP_STORE_CONNECT_API_KEY'] = "fastlane/app-store-connect.json"
+  ENV['PATH_DSYM'] = "#{build_dir}/#{ipa_file_name}.app.dSYM.zip"
+  ENV['PATH_FIREBASE_CLI'] = "#{firebase_cli_path}"
+  ENV['PATH_IPA'] = "#{build_dir}/#{ipa_file_name}.ipa"
+  ENV['FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD'] = options[:specific_password]
+  ENV['WORKSPACE'] = workspace
+  ENV['CURRENT_BUILD_NUMBER'] = get_build_number(xcodeproj: "#{xcodeproj}")
+
+end
+
+platform :ios do
+ desc "Description of what the lane does"
+ lane :codesigning do |options|
+   create_keychain(
+   name: "Learning1Keychain",
+   default_keychain: false,
+   unlock: true,
+   timeout: 3600,
+   lock_when_sleeps: true,
+   password: "123456"
+ )
+  
+  import_certificate(
+     keychain_name: "Learning1Keychain",
+     certificate_path: ENV['CERTIFICATE_FILE_PATH'],
+     keychain_password: "123456",
+     certificate_password: "123456",
+   )
+
+ end
+
+# =============
+  # Install Provisioning profile
+  # =============
+  desc 'Install Provisioning profile'
+  lane :prepareProvisioningProfile do
+    install_provisioning_profile(path: ENV['PROVISIONING_FILE_PATH'])
+    update_code_signing_settings(
+      targets: "#{project_name}",
+      path: "#{xcodeproj}",
+      profile_name: ENV['PROVISIONING_KEY_NAME'],
+      code_sign_identity:"iPhone Distribution"
+    )
+  end
+
+
+ lane :buildApp do |options|
+   gym(
+       scheme: ENV['ACTIVE_SCHEME'],
+       workspace: ENV['WORKSPACE'],
+       export_method: ENV['ARCHIVE_METHOD'],
+       output_directory: ENV['BUILD_DIRECTORY'],
+       output_name: "#{ENV['IPA_FILE_NAME']}.ipa",
+       clean: true,
+       export_options: {
+        signingStyle: "manual",
+        provisioningProfiles: {
+            ENV['APP_IDENTIFIER'] => ENV['PROVISIONING_KEY_NAME']
+      }
+    }
+   )
+ end
+ 
+  # =============
+  # Increase build number
+  # =============
+  desc "Increase build number"
+  lane :incrementBuild do
+    increment_build_number(
+      build_number: ENV['CURRENT_BUILD_NUMBER'].to_i + 1,
+      xcodeproj: xcodeproj)
+  end
+  
+  # =============
+  # Check Environment Info
+  # =============
+  desc 'Check Environment Info'
+  lane :checkEnvironmentInfo do
+    printBuildInfo()
+  end
+ 
+ 
+ lane :distributeToFirebase do 
+      firebase_app_distribution(
+           app: "1:444550039548:ios:4ece8b5b37a1d25dd55479",
+           testers: "thuanuit96@gmail.com",
+           release_notes: "Deploy new version",
+           service_credentials_file: service_credentials_file,
+           ipa_path: ENV['PATH_IPA']
+       )
+
+  end
+  
+  lane :uploadToAppStore do
+    deliver(
+      ipa: "Grapevine.ipa",
+      app_identifier: ENV['APP_IDENTIFIER'],
+      username: "thuanuit96@gmail.com",
+      password: "Specific Password",
+      skip_screenshots: true,
+      skip_metadata: true,
+      skip_binary_upload: false
+      )
+  end
+  
+  # =============
+  # Archive Firebase Distribute
+  # =============
+  lane :archiveFirebaseDistribute do
+    checkEnvironmentInfo
+    codesigning
+    incrementBuild
+    buildApp
+    distributeToFirebase
+     
+  end
+  
+  
+  # =============
+  # Archive TestFlight
+  # =============
+  lane :archiveTestflight do
+    checkEnvironmentInfo
+    codesigning
+    incrementBuild
+    buildApp
+    uploadToAppStore
+  end
+end
+
+# =============
+# Methods
+# =============
+def printBuildInfo()
+  UI.success "--------------------------"
+  UI.header "  Build Info  "
+  UI.important "APP_IDENTIFIER: #{ENV['APP_IDENTIFIER']}"
+  UI.important "ACTIVE_SCHEME: #{ENV['ACTIVE_SCHEME']}"
+  UI.important "ARCHIVE_METHOD: #{ENV['ARCHIVE_METHOD']}"
+  UI.important "CURRENT_BUILD_NUMBER: #{ENV['CURRENT_BUILD_NUMBER']}"
+  UI.important "PATH_DSYM: #{ENV['PATH_DSYM']}"
+  UI.important "PATH_GSP: #{ENV['PATH_GSP']}"
+  UI.important "PATH_IPA: #{ENV['PATH_IPA']}"
+  UI.important "IPA_FILE_NAME: #{ENV['IPA_FILE_NAME']}"
+  UI.important "PROVISIONING_KEY_NAME: #{ENV['PROVISIONING_KEY_NAME']}"
+  UI.important "PROVISIONING_FILE_PATH: #{ENV['PROVISIONING_FILE_PATH']}"
+  UI.important "TEAM_ID: #{ENV['TEAM_ID']}"
+  UI.important "SLACK_URL: #{ENV['SLACK_URL']}"
+  UI.important "GIT_BRANCH: #{ENV['GIT_BRANCH']}"
+  UI.important "CI_COMMIT_SHA: #{ENV['CI_COMMIT_SHA']}"
+  UI.important "LAST_GIT_TAG: #{ENV['LAST_GIT_TAG']}"
+  UI.important "CHANGE_LOG: #{ENV['CHANGE_LOG']}"
+  UI.success "--------------------------"
+end

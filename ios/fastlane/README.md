@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Description of what the lane does
 
+### ios prepareProvisioningProfile
+
+```sh
+[bundle exec] fastlane ios prepareProvisioningProfile
+```
+
+Install Provisioning profile
+
 ### ios buildApp
 
 ```sh
@@ -31,18 +39,50 @@ Description of what the lane does
 
 
 
-### ios distribute
+### ios incrementBuild
 
 ```sh
-[bundle exec] fastlane ios distribute
+[bundle exec] fastlane ios incrementBuild
+```
+
+Increase build number
+
+### ios checkEnvironmentInfo
+
+```sh
+[bundle exec] fastlane ios checkEnvironmentInfo
+```
+
+Check Environment Info
+
+### ios distributeToFirebase
+
+```sh
+[bundle exec] fastlane ios distributeToFirebase
 ```
 
 
 
-### ios upload_to_app_store
+### ios uploadToAppStore
 
 ```sh
-[bundle exec] fastlane ios upload_to_app_store
+[bundle exec] fastlane ios uploadToAppStore
+```
+
+
+
+### ios archiveFirebaseDistribute
+
+```sh
+[bundle exec] fastlane ios archiveFirebaseDistribute
+```
+
+
+
+### ios archiveTestflight
+
+```sh
+[bundle exec] fastlane ios archiveTestflight
 ```
 
 
