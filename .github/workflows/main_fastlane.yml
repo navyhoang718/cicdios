@@ -44,4 +44,4 @@ jobs:
       - name: CocoaPod Install
         run:  pod install
       - name: Build and upload app to firebase
-        run: cd ios && fastlane archiveFirebaseDistribute scheme:GrapevineDev archive_method:app-store
+        run: cd ios && fastlane archiveFirebaseDistribute scheme:GrapevineDev archive_method:ad-hoc
