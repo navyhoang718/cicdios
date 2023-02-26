@@ -16,7 +16,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Move on ios folder
+        run:  cd ios
       - name: CocoaPod Install
-        run: cd ios && pod install
+        run:  pod install
       - name: Build and upload app to firebase
         run: fastlane archiveFirebaseDistribute scheme:GrapevineDev archive_method:ad-hoc
