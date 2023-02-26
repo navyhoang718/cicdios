@@ -1,5 +1,5 @@
 
-name: iOS CI
+name: iOS CI 1
 on: [push]
 
 jobs:
