@@ -164,6 +164,8 @@
 		CE2919D829AB532500444C8C /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
+				CE2919D729AB275600444C8C /* greenstock-adhoc.mobileprovision */,
+				CE815CB329A919DE004F8B41 /* greenstock-appstore.mobileprovision */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -171,8 +173,6 @@
 		CE815CA829A90D53004F8B41 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				CE2919D729AB275600444C8C /* greenstock-adhoc.mobileprovision */,
-				CE815CB329A919DE004F8B41 /* greenstock-appstore.mobileprovision */,
 				CE2919BA29A9AE5400444C8C /* wdxios-serviceCredential.json */,
 				CE815CB429A919EC004F8B41 /* certificate.p12 */,
 				CE815CA929A90D53004F8B41 /* Appfile */,
