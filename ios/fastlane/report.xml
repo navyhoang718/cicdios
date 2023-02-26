@@ -5,62 +5,62 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000462">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000359">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: get_build_number" time="0.383718">
+      <testcase classname="fastlane.lanes" name="01: get_build_number" time="0.297623">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: Switch to ios checkEnvironmentInfo lane" time="0.000239">
+      <testcase classname="fastlane.lanes" name="02: Switch to ios checkEnvironmentInfo lane" time="0.000185">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: Switch to ios codesigning lane" time="0.000156">
+      <testcase classname="fastlane.lanes" name="03: Switch to ios codesigning lane" time="0.000124">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: create_keychain" time="0.07318">
+      <testcase classname="fastlane.lanes" name="04: create_keychain" time="0.068471">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: import_certificate" time="0.136886">
+      <testcase classname="fastlane.lanes" name="05: import_certificate" time="0.136041">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: Switch to ios incrementBuild lane" time="0.000244">
+      <testcase classname="fastlane.lanes" name="06: Switch to ios incrementBuild lane" time="0.000349">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: increment_build_number" time="0.595355">
+      <testcase classname="fastlane.lanes" name="07: increment_build_number" time="0.585437">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: Switch to ios buildApp lane" time="0.000198">
+      <testcase classname="fastlane.lanes" name="08: Switch to ios buildApp lane" time="0.00017">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: gym" time="29.630899">
+      <testcase classname="fastlane.lanes" name="09: gym" time="63.125041">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: Switch to ios distributeToFirebase lane" time="0.000218">
+      <testcase classname="fastlane.lanes" name="10: Switch to ios distributeToFirebase lane" time="0.000219">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: firebase_app_distribution" time="43.257772">
+      <testcase classname="fastlane.lanes" name="11: firebase_app_distribution" time="6.424016">
         
       </testcase>
     
