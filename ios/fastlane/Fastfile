@@ -63,7 +63,7 @@ platform :ios do
  desc "Description of what the lane does"
  lane :codesigning do |options|
    create_keychain(
-   name: "Learning1Keychain",
+   name: "MyKeychain",
    default_keychain: true,
    unlock: true,
    timeout: 3600,
