@@ -204,3 +204,4 @@ def printBuildInfo()
   UI.important "CHANGE_LOG: #{ENV['CHANGE_LOG']}"
   UI.success "--------------------------"
 end
+# base64 -i profile.mobileprovision -o profile_base64.txt for create endcode base 64
