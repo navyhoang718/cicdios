@@ -77,6 +77,7 @@ platform :ios do
      keychain_password: "123456",
      certificate_password: "123456",
    )
+     prepareProvisioningProfile
 
  end
 
