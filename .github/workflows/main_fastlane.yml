@@ -17,10 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: CocoaPod Install
-        run: pod install
-      - name: Provisioning profile
-        run: fastlane codesigning scheme:Grapevine archive_method:app-store
-      - name: Build
-        run: fastlane buildApp scheme:Grapevine archive_method:app-store
-      - name: Distribute 
-        run: fastlane distribute scheme:Grapevine archive_method:app-store
+        run: cd ios && pod install
+      - name: Build and upload app to firebase
+        run: fastlane archiveFirebaseDistribute scheme:GrapevineDev archive_method:ad-hoc
