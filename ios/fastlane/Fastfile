@@ -64,7 +64,7 @@ platform :ios do
  lane :codesigning do |options|
    create_keychain(
    name: "Learning1Keychain",
-   default_keychain: false,
+   default_keychain: true,
    unlock: true,
    timeout: 3600,
    lock_when_sleeps: true,
@@ -72,7 +72,7 @@ platform :ios do
  )
   
   import_certificate(
-     keychain_name: "Learning1Keychain",
+     keychain_name: "MyKeychain",
      certificate_path: ENV['CERTIFICATE_FILE_PATH'],
      keychain_password: "123456",
      certificate_password: "123456",
